@@ -1,0 +1,1766 @@
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:37:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: posts: SELECT * FROM "posts" ):
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract_adapter.rb:189:in `log'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `select_all'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:95:in `cache_sql'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `select_all'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:635:in `find_by_sql'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1490:in `find_every'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:589:in `find'
+    /app/controllers/posts_controller.rb:5:in `index'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:39:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 33ms (View: 21, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-12 21:40:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-12 21:40:05) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"b229829b5e5a8f942486807a49a754fe48966769", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1220:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1233:in `column_names'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1246:in `column_methods_hash'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:75:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1770:in `method_missing'
+    /app/models/user.rb:23:in `authenticate'
+    /app/controllers/sessions_controller.rb:11:in `create'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:41:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-12 21:41:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-12 21:41:27) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"b229829b5e5a8f942486807a49a754fe48966769", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1220:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1233:in `column_names'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1246:in `column_methods_hash'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1770:in `method_missing'
+    /app/models/user.rb:23:in `authenticate'
+    /app/controllers/sessions_controller.rb:11:in `create'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:41:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing UsersController#new (for 71.59.210.192 at 2008-11-12 21:41:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/signup]
+
+
+Processing UsersController#create (for 71.59.210.192 at 2008-11-12 21:41:41) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"b229829b5e5a8f942486807a49a754fe48966769", "action"=>"create", "controller"=>"users", "user"=>{"password_confirmation"=>"llama3844", "login"=>"distaula", "password"=>"llama3844", "email"=>"distaula@gmail.com"}}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1220:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:2831:in `attributes_from_column_definition_without_lock'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/locking/optimistic.rb:55:in `attributes_from_column_definition'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:2272:in `initialize'
+    /app/controllers/users_controller.rb:16:in `new'
+    /app/controllers/users_controller.rb:16:in `create'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#show (for 71.59.210.192 at 2008-11-12 21:43:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 59ms (View: 34, DB: 2) | 200 OK [http://web.mikedistaula.com/posts/1]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:43:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 33ms (View: 21, DB: 3) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-12 21:43:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-12 21:43:18) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNjFmZGIxOGQ4ZTg4ZWZiM2NmMDUwZjFjNTE2OGMxNGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--df8e83eb3d3eb232973d8c78314920bed87f6852
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"b229829b5e5a8f942486807a49a754fe48966769", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+Redirected to /
+Completed in 18ms (DB: 1) | 302 Found [http://web.mikedistaula.com/session]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:43:18) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--f980dd93fa58179676ec363715955e991436da40
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 23ms (View: 17, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#new (for 71.59.210.192 at 2008-11-12 21:43:27) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--d3970b359948aab05243a82c0d46609d92d05aaa
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 38ms (View: 24, DB: 1) | 200 OK [http://web.mikedistaula.com/posts/new]
+
+
+Processing PostsController#create (for 71.59.210.192 at 2008-11-12 21:43:38) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"commit"=>"Create", "post"=>{"title"=>"Testing posting", "body"=>"testing posting"}, "authenticity_token"=>"b229829b5e5a8f942486807a49a754fe48966769", "action"=>"create", "controller"=>"posts"}
+Redirected to /posts
+Completed in 11ms (DB: 1) | 302 Found [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:43:39) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CUY=--d885dba3aa63a6e32255afe87a08fdede6883c22
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 19ms (View: 12, DB: 4) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#destroy (for 71.59.210.192 at 2008-11-12 21:43:50) [DELETE]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVkLgY6CkB1c2VkewY7CVQ=--2bf2a09819fb098c1d57a1ef34a3cb0f48de99de
+  Parameters: {"authenticity_token"=>"b229829b5e5a8f942486807a49a754fe48966769", "_method"=>"delete", "action"=>"destroy", "id"=>"2", "controller"=>"posts"}
+Redirected to http://web.mikedistaula.com:81/posts
+Completed in 19ms (DB: 3) | 302 Found [http://web.mikedistaula.com/posts/2]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:43:51) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 19ms (View: 13, DB: 3) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:45:23) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:45:56) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 18ms (View: 12, DB: 3) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:46:20) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:47:26) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:48:20) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 46ms (View: 33, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:49:02) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 47ms (View: 34, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:49:35) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 47ms (View: 34, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:49:52) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 46ms (View: 34, DB: 4) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:50:06) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 45ms (View: 33, DB: 4) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:54:38) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-12 21:54:40) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/style.css" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-12 21:54:40) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/cutemike.jpg" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-12 21:55:11) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/cutemike.jpg" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-12 21:56:33) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/index.html" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:56:40) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:57:11) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:57:18) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 21:57:29) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 216.220.110.61 at 2008-11-12 21:58:43) [GET]
+  Session ID: b94732bc97e208e5c648ba2a3e548dce
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 22:00:40) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 22:00:45) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 216.220.110.61 at 2008-11-12 22:01:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 216.220.110.61 at 2008-11-12 22:01:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing UsersController#new (for 216.220.110.61 at 2008-11-12 22:01:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOGFkZjZkNGQ3ZDZhNmMzNzc2ZmMyOGI5MzEyNGQ3MjkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--5a68dcbc1e0e18b60cdd4cc88c080e508aebf75e
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/signup]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-12 23:41:00) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 00:54:53) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#destroy (for 71.59.210.192 at 2008-11-13 00:54:56) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU2MWZkYjE4ZDhlODhlZmIzY2YwNTBmMWM1MTY4YzE0ZCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3cc00e9432b0ae5f47172faf0abc9b274fa3bd42
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 114ms (DB: 1) | 302 Found [http://web.mikedistaula.com/logout]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 00:54:56) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdG--1589a6ac397c03d7c2fa8b8d389f7aa406c0b8a0
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 00:54:57) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdU--33ea31404b9d2159e62bdb6eaa3c66c81463a05f
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing UsersController#new (for 71.59.210.192 at 2008-11-13 00:55:01) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNWJkNWViNjEyZTQ2ZDc2M2I0MDBiMzJmZTExODZjNWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e4e818ede4f4d27202c3f92e90483353a68a865a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/signup]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 00:55:14) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNWJkNWViNjEyZTQ2ZDc2M2I0MDBiMzJmZTExODZjNWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e4e818ede4f4d27202c3f92e90483353a68a865a
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 00:55:17) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNWJkNWViNjEyZTQ2ZDc2M2I0MDBiMzJmZTExODZjNWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e4e818ede4f4d27202c3f92e90483353a68a865a
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 00:55:19) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNWJkNWViNjEyZTQ2ZDc2M2I0MDBiMzJmZTExODZjNWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e4e818ede4f4d27202c3f92e90483353a68a865a
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 00:55:56) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNWJkNWViNjEyZTQ2ZDc2M2I0MDBiMzJmZTExODZjNWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e4e818ede4f4d27202c3f92e90483353a68a865a
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-13 00:56:06) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNWJkNWViNjEyZTQ2ZDc2M2I0MDBiMzJmZTExODZjNWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--e4e818ede4f4d27202c3f92e90483353a68a865a
+  Parameters: {"commit"=>"Log in", "openid_url"=>"llamabroth.myopenid.com", "authenticity_token"=>"1f64cb068be762d7212802dc1bb23b7abb288096", "action"=>"create", "controller"=>"sessions", "password"=>"", "login"=>""}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'open_id_authentication_associations'):
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1220:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1233:in `column_names'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1246:in `column_methods_hash'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1770:in `method_missing'
+    /vendor/plugins/open_id_authentication/lib/open_id_authentication/db_store.rb:27:in `get_association'
+    /usr/lib/ruby/gems/1.8/gems/ruby-openid-2.1.2/lib/openid/consumer/associationmanager.rb:116:in `get_association'
+    /usr/lib/ruby/gems/1.8/gems/ruby-openid-2.1.2/lib/openid/consumer.rb:243:in `begin_without_discovery'
+    /usr/lib/ruby/gems/1.8/gems/ruby-openid-2.1.2/lib/openid/consumer.rb:228:in `begin'
+    /vendor/plugins/open_id_authentication/lib/open_id_authentication.rb:95:in `begin_open_id_authentication'
+    /vendor/plugins/open_id_authentication/lib/open_id_authentication.rb:86:in `authenticate_with_open_id'
+    /app/controllers/sessions_controller.rb:32:in `open_id_authentication'
+    /app/controllers/sessions_controller.rb:15:in `create'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:42:57) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdU--33ea31404b9d2159e62bdb6eaa3c66c81463a05f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 32ms (View: 20, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 02:43:11) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e65561b2891dcb7d83cca71003b4d3de0adf816b
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-13 02:43:17) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlZTE2NzE4OTBmNWFkMDc5NjZiZWIxYzJiYzgxYWQ0OTkiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--1813235b363f20e42e6eee67fa2313bf1a3cdc83
+  Parameters: {"commit"=>"Log in", "openid_url"=>"", "authenticity_token"=>"0d8f0892b9248c5defd1af0337bffcd189bb83ad", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+Redirected to /
+Completed in 20ms (DB: 1) | 302 Found [http://web.mikedistaula.com/session]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:43:17) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVlMTY3MTg5MGY1YWQwNzk2NmJlYjFjMmJjODFhZDQ5OSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--1ce0fd58c1ea6ccf7cc309bc4928bddbdb6207f6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 23ms (View: 17, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#new (for 71.59.210.192 at 2008-11-13 02:43:38) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVlMTY3MTg5MGY1YWQwNzk2NmJlYjFjMmJjODFhZDQ5OSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--0f8fd657208c3234a1169ed2d76798b472e0632c
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 36ms (View: 23, DB: 1) | 200 OK [http://web.mikedistaula.com/posts/new]
+
+
+Processing SessionsController#destroy (for 71.59.210.192 at 2008-11-13 02:43:44) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVlMTY3MTg5MGY1YWQwNzk2NmJlYjFjMmJjODFhZDQ5OSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--a1de8b2489cc93a436cdd33a070beea866285874
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 64ms (DB: 1) | 302 Found [http://web.mikedistaula.com/logout]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:43:44) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdG--1589a6ac397c03d7c2fa8b8d389f7aa406c0b8a0
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#new (for 71.59.210.192 at 2008-11-13 02:43:48) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdU--33ea31404b9d2159e62bdb6eaa3c66c81463a05f
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://web.mikedistaula.com/posts/new]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:43:55) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 29ms (View: 19, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:44:37) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/posts]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:44:47) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 02:45:15) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 157ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:19:07) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 12:19:11) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-13 12:19:16) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlNGM3ZmNlYmE2Yjg2ZjIxOGM2MTYzMTU0NjJjODg0NGUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--b76e5d6f941145720a962b6bbc8aac77e58d6553
+  Parameters: {"commit"=>"Log in", "openid_url"=>"", "authenticity_token"=>"ce394015b9ac4f8cc5e0a06b40117725764e3eac", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+Redirected to /
+Completed in 4ms (DB: 1) | 302 Found [http://web.mikedistaula.com/session]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:19:16) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU0YzdmY2ViYTZiODZmMjE4YzYxNjMxNTQ2MmM4ODQ0ZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--ec98b64489276006d48cca5b47e4dbaaa2408bef
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#destroy (for 71.59.210.192 at 2008-11-13 12:21:31) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU0YzdmY2ViYTZiODZmMjE4YzYxNjMxNTQ2MmM4ODQ0ZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--aa5575df4c5379ebade0d1e6129c6d635fe618b4
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 218ms (DB: 1) | 302 Found [http://web.mikedistaula.com/logout]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:21:32) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdG--1589a6ac397c03d7c2fa8b8d389f7aa406c0b8a0
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 12:21:33) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdU--33ea31404b9d2159e62bdb6eaa3c66c81463a05f
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-13 12:21:39) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlZDZhY2ZhN2Q3OGI5MmZlOWIwMWE2YTA5YWE2MTg1NDgiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--a058f49886f85f89bac9422dd5342e610f50d6ca
+  Parameters: {"commit"=>"Log in", "openid_url"=>"", "authenticity_token"=>"86398f979121cd0bf76dc5247608e2cb62f13f54", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+Redirected to /
+Completed in 4ms (DB: 1) | 302 Found [http://web.mikedistaula.com/session]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:21:39) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVkNmFjZmE3ZDc4YjkyZmU5YjAxYTZhMDlhYTYxODU0OCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--b1dfab4628de2c295382ac39063b3f63ffa25028
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:36:01) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVkNmFjZmE3ZDc4YjkyZmU5YjAxYTZhMDlhYTYxODU0OCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--108b5fd085825ecbade7ba5633cb40a03c0c4e7b
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 43ms (View: 31, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#destroy (for 71.59.210.192 at 2008-11-13 12:36:03) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVkNmFjZmE3ZDc4YjkyZmU5YjAxYTZhMDlhYTYxODU0OCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--3f32370839ab18ff23f0d420e0768ddcf52dfc2b
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to /
+Completed in 80ms (DB: 1) | 302 Found [http://web.mikedistaula.com/logout]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:36:03) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdG--1589a6ac397c03d7c2fa8b8d389f7aa406c0b8a0
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 32ms (View: 21, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 12:36:06) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpAdXNlZHsGOwdU--33ea31404b9d2159e62bdb6eaa3c66c81463a05f
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-13 12:36:12) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvMDoMY3NyZl9pZCIlZjY2NDcxNzNkOTkyNWU2MWJhNTE5YmY5NGU4ZWY3Y2YiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--f45ff29c74cae6da200cfa0312f53e6f59ae03c7
+  Parameters: {"openid_url"=>"", "commit"=>"Log in", "authenticity_token"=>"661b4980517919b1075b1614f1e9f2b2542feed5", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+Redirected to /
+Completed in 5ms (DB: 1) | 302 Found [http://web.mikedistaula.com/session]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 12:36:12) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--ae9be7903efc5d4234622f1145915a9275413597
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 23ms (View: 17, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 15:24:41) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--6da7197423932b33ef0f748864ed975c593eee2d
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 15:26:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 34ms (View: 23, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 15:26:49) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 16:26:30) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 44ms (View: 32, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-13 16:26:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/distaula-jkando" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-13 16:26:50) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/distaula-jkando/" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 16:27:22) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing ApplicationController#index (for 71.59.210.192 at 2008-11-13 16:27:23) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVmNjY0NzE3M2Q5OTI1ZTYxYmE1MTliZjk0ZThlZjdjZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--fa925ce8a18d105ddb22df2810bcd88b4eb6a74e
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/distaula-jkando" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing PostsController#index (for 216.220.110.61 at 2008-11-13 20:55:56) [GET]
+  Session ID: ddca5a48a9bd1232e9cddc0d66ae3919
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 32ms (View: 21, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 216.220.110.61 at 2008-11-13 20:55:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 216.220.110.61 at 2008-11-13 20:56:05) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzk0ZDVhZGNiNzgwMmVhOWQ5NDdmMzE1YTBkOTlmZTAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--894f278fbed0d6e05f02cf4e237d78ef9364b37f
+  Parameters: {"openid_url"=>"mike-burns.com", "commit"=>"Log in", "authenticity_token"=>"fcb1157b75ad41c8c1444f73e63205dd899ba170", "action"=>"create", "controller"=>"sessions", "password"=>"", "login"=>""}
+
+
+ActiveRecord::StatementInvalid (Could not find table 'open_id_authentication_associations'):
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:29:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/object/misc.rb:39:in `returning'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:28:in `table_structure'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/sqlite_adapter.rb:189:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1220:in `columns'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1233:in `column_names'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1246:in `column_methods_hash'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1852:in `all_attributes_exists?'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/base.rb:1770:in `method_missing'
+    /vendor/plugins/open_id_authentication/lib/open_id_authentication/db_store.rb:27:in `get_association'
+    /usr/lib/ruby/gems/1.8/gems/ruby-openid-2.1.2/lib/openid/consumer/associationmanager.rb:116:in `get_association'
+    /usr/lib/ruby/gems/1.8/gems/ruby-openid-2.1.2/lib/openid/consumer.rb:243:in `begin_without_discovery'
+    /usr/lib/ruby/gems/1.8/gems/ruby-openid-2.1.2/lib/openid/consumer.rb:228:in `begin'
+    /vendor/plugins/open_id_authentication/lib/open_id_authentication.rb:95:in `begin_open_id_authentication'
+    /vendor/plugins/open_id_authentication/lib/open_id_authentication.rb:86:in `authenticate_with_open_id'
+    /app/controllers/sessions_controller.rb:32:in `open_id_authentication'
+    /app/controllers/sessions_controller.rb:15:in `create'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing UsersController#new (for 216.220.110.61 at 2008-11-13 20:56:43) [GET]
+  Session ID: BAh7CCI9T3BlbklEOjpDb25zdW1lcjo6RGlzY292ZXJlZFNlcnZpY2VzOjpPcGVuSUQ6OkNvbnN1bWVyOjpvOilPcGVuSUQ6OkNvbnN1bWVyOjpEaXNjb3ZlcmVkU2VydmljZXMJOg5Ac2VydmljZXNbB286Ik9wZW5JRDo6T3BlbklEU2VydmljZUVuZHBvaW50DDoYQGRpc3BsYXlfaWRlbnRpZmllcjA6D0B0eXBlX3VyaXNbCiIhaHR0cDovL29wZW5pZC5uZXQvc2lnbm9uLzEuMSIfaHR0cDovL29wZW5pZC5uZXQvc3JlZy8xLjAiKmh0dHA6Ly9vcGVuaWQubmV0L2V4dGVuc2lvbnMvc3JlZy8xLjEiR2h0dHA6Ly9zY2hlbWFzLm9wZW5pZC5uZXQvcGFwZS9wb2xpY2llcy8yMDA3LzA2L3BoaXNoaW5nLXJlc2lzdGFudCIhaHR0cDovL29wZW5pZC5uZXQvc3J2L2F4LzEuMDoQQHVzZWRfeWFkaXNUOhBAc2VydmVyX3VybCIjaHR0cDovL3d3dy5teW9wZW5pZC5jb20vc2VydmVyOhJAY2Fub25pY2FsX2lkMDoQQGNsYWltZWRfaWQiG2h0dHA6Ly9taWtlLWJ1cm5zLmNvbS86DkBsb2NhbF9pZCIkaHR0cDovL21pa2UuYnVybnMubXlvcGVuaWQuY29tL287Bww7CDA7CVsKIiFodHRwOi8vb3BlbmlkLm5ldC9zaWdub24vMS4wIh9odHRwOi8vb3BlbmlkLm5ldC9zcmVnLzEuMCIqaHR0cDovL29wZW5pZC5uZXQvZXh0ZW5zaW9ucy9zcmVnLzEuMSJHaHR0cDovL3NjaGVtYXMub3BlbmlkLm5ldC9wYXBlL3BvbGljaWVzLzIwMDcvMDYvcGhpc2hpbmctcmVzaXN0YW50IiFodHRwOi8vb3BlbmlkLm5ldC9zcnYvYXgvMS4wOwpUOwsiI2h0dHA6Ly93d3cubXlvcGVuaWQuY29tL3NlcnZlcjsMMDsNQBE7DiIkaHR0cDovL21pa2UuYnVybnMubXlvcGVuaWQuY29tLzoPQHlhZGlzX3VybCIbaHR0cDovL21pa2UtYnVybnMuY29tLzoSQHN0YXJ0aW5nX3VybCIbaHR0cDovL21pa2UtYnVybnMuY29tLzoNQGN1cnJlbnRvOwcMOwgwOwlbCiIsaHR0cDovL3NwZWNzLm9wZW5pZC5uZXQvYXV0aC8yLjAvc2lnbm9uIh9odHRwOi8vb3BlbmlkLm5ldC9zcmVnLzEuMCIqaHR0cDovL29wZW5pZC5uZXQvZXh0ZW5zaW9ucy9zcmVnLzEuMSJHaHR0cDovL3NjaGVtYXMub3BlbmlkLm5ldC9wYXBlL3BvbGljaWVzLzIwMDcvMDYvcGhpc2hpbmctcmVzaXN0YW50IiFodHRwOi8vb3BlbmlkLm5ldC9zcnYvYXgvMS4wOwpUOwsiI2h0dHA6Ly93d3cubXlvcGVuaWQuY29tL3NlcnZlcjsMMDsNQBE7DiIkaHR0cDovL21pa2UuYnVybnMubXlvcGVuaWQuY29tLzoMY3NyZl9pZCIlYzk0ZDVhZGNiNzgwMmVhOWQ5NDdmMzE1YTBkOTlmZTAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--78beed1042bce098e2d5433b3aa71080a49566df
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://web.mikedistaula.com/signup]
+
+
+Processing SessionsController#new (for 216.220.110.61 at 2008-11-13 20:56:46) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYzk0ZDVhZGNiNzgwMmVhOWQ5NDdmMzE1YTBkOTlmZTAiPU9wZW5JRDo6Q29uc3VtZXI6OkRpc2NvdmVyZWRTZXJ2aWNlczo6T3BlbklEOjpDb25zdW1lcjo6bzopT3BlbklEOjpDb25zdW1lcjo6RGlzY292ZXJlZFNlcnZpY2VzCToOQHNlcnZpY2VzWwdvOiJPcGVuSUQ6Ok9wZW5JRFNlcnZpY2VFbmRwb2ludAw6GEBkaXNwbGF5X2lkZW50aWZpZXIwOg9AdHlwZV91cmlzWwoiIWh0dHA6Ly9vcGVuaWQubmV0L3NpZ25vbi8xLjEiH2h0dHA6Ly9vcGVuaWQubmV0L3NyZWcvMS4wIipodHRwOi8vb3BlbmlkLm5ldC9leHRlbnNpb25zL3NyZWcvMS4xIkdodHRwOi8vc2NoZW1hcy5vcGVuaWQubmV0L3BhcGUvcG9saWNpZXMvMjAwNy8wNi9waGlzaGluZy1yZXNpc3RhbnQiIWh0dHA6Ly9vcGVuaWQubmV0L3Nydi9heC8xLjA6EEB1c2VkX3lhZGlzVDoQQHNlcnZlcl91cmwiI2h0dHA6Ly93d3cubXlvcGVuaWQuY29tL3NlcnZlcjoSQGNhbm9uaWNhbF9pZDA6EEBjbGFpbWVkX2lkIhtodHRwOi8vbWlrZS1idXJucy5jb20vOg5AbG9jYWxfaWQiJGh0dHA6Ly9taWtlLmJ1cm5zLm15b3BlbmlkLmNvbS9vOwgMOwkwOwpbCiIhaHR0cDovL29wZW5pZC5uZXQvc2lnbm9uLzEuMCIfaHR0cDovL29wZW5pZC5uZXQvc3JlZy8xLjAiKmh0dHA6Ly9vcGVuaWQubmV0L2V4dGVuc2lvbnMvc3JlZy8xLjEiR2h0dHA6Ly9zY2hlbWFzLm9wZW5pZC5uZXQvcGFwZS9wb2xpY2llcy8yMDA3LzA2L3BoaXNoaW5nLXJlc2lzdGFudCIhaHR0cDovL29wZW5pZC5uZXQvc3J2L2F4LzEuMDsLVDsMIiNodHRwOi8vd3d3Lm15b3BlbmlkLmNvbS9zZXJ2ZXI7DTA7DkASOw8iJGh0dHA6Ly9taWtlLmJ1cm5zLm15b3BlbmlkLmNvbS86D0B5YWRpc191cmwiG2h0dHA6Ly9taWtlLWJ1cm5zLmNvbS86EkBzdGFydGluZ191cmwiG2h0dHA6Ly9taWtlLWJ1cm5zLmNvbS86DUBjdXJyZW50bzsIDDsJMDsKWwoiLGh0dHA6Ly9zcGVjcy5vcGVuaWQubmV0L2F1dGgvMi4wL3NpZ25vbiIfaHR0cDovL29wZW5pZC5uZXQvc3JlZy8xLjAiKmh0dHA6Ly9vcGVuaWQubmV0L2V4dGVuc2lvbnMvc3JlZy8xLjEiR2h0dHA6Ly9zY2hlbWFzLm9wZW5pZC5uZXQvcGFwZS9wb2xpY2llcy8yMDA3LzA2L3BoaXNoaW5nLXJlc2lzdGFudCIhaHR0cDovL29wZW5pZC5uZXQvc3J2L2F4LzEuMDsLVDsMIiNodHRwOi8vd3d3Lm15b3BlbmlkLmNvbS9zZXJ2ZXI7DTA7DkASOw8iJGh0dHA6Ly9taWtlLmJ1cm5zLm15b3BlbmlkLmNvbS8iCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--21cb2ce1ed540274c99081eb474281ee1fc963f5
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/session/new]
+
+
+Processing ApplicationController#index (for 216.220.110.61 at 2008-11-13 20:56:54) [GET]
+  Session ID: BAh7CCI9T3BlbklEOjpDb25zdW1lcjo6RGlzY292ZXJlZFNlcnZpY2VzOjpPcGVuSUQ6OkNvbnN1bWVyOjpvOilPcGVuSUQ6OkNvbnN1bWVyOjpEaXNjb3ZlcmVkU2VydmljZXMJOg5Ac2VydmljZXNbB286Ik9wZW5JRDo6T3BlbklEU2VydmljZUVuZHBvaW50DDoYQGRpc3BsYXlfaWRlbnRpZmllcjA6D0B0eXBlX3VyaXNbCiIhaHR0cDovL29wZW5pZC5uZXQvc2lnbm9uLzEuMSIfaHR0cDovL29wZW5pZC5uZXQvc3JlZy8xLjAiKmh0dHA6Ly9vcGVuaWQubmV0L2V4dGVuc2lvbnMvc3JlZy8xLjEiR2h0dHA6Ly9zY2hlbWFzLm9wZW5pZC5uZXQvcGFwZS9wb2xpY2llcy8yMDA3LzA2L3BoaXNoaW5nLXJlc2lzdGFudCIhaHR0cDovL29wZW5pZC5uZXQvc3J2L2F4LzEuMDoQQHVzZWRfeWFkaXNUOhBAc2VydmVyX3VybCIjaHR0cDovL3d3dy5teW9wZW5pZC5jb20vc2VydmVyOhJAY2Fub25pY2FsX2lkMDoQQGNsYWltZWRfaWQiG2h0dHA6Ly9taWtlLWJ1cm5zLmNvbS86DkBsb2NhbF9pZCIkaHR0cDovL21pa2UuYnVybnMubXlvcGVuaWQuY29tL287Bww7CDA7CVsKIiFodHRwOi8vb3BlbmlkLm5ldC9zaWdub24vMS4wIh9odHRwOi8vb3BlbmlkLm5ldC9zcmVnLzEuMCIqaHR0cDovL29wZW5pZC5uZXQvZXh0ZW5zaW9ucy9zcmVnLzEuMSJHaHR0cDovL3NjaGVtYXMub3BlbmlkLm5ldC9wYXBlL3BvbGljaWVzLzIwMDcvMDYvcGhpc2hpbmctcmVzaXN0YW50IiFodHRwOi8vb3BlbmlkLm5ldC9zcnYvYXgvMS4wOwpUOwsiI2h0dHA6Ly93d3cubXlvcGVuaWQuY29tL3NlcnZlcjsMMDsNQBE7DiIkaHR0cDovL21pa2UuYnVybnMubXlvcGVuaWQuY29tLzoPQHlhZGlzX3VybCIbaHR0cDovL21pa2UtYnVybnMuY29tLzoSQHN0YXJ0aW5nX3VybCIbaHR0cDovL21pa2UtYnVybnMuY29tLzoNQGN1cnJlbnRvOwcMOwgwOwlbCiIsaHR0cDovL3NwZWNzLm9wZW5pZC5uZXQvYXV0aC8yLjAvc2lnbm9uIh9odHRwOi8vb3BlbmlkLm5ldC9zcmVnLzEuMCIqaHR0cDovL29wZW5pZC5uZXQvZXh0ZW5zaW9ucy9zcmVnLzEuMSJHaHR0cDovL3NjaGVtYXMub3BlbmlkLm5ldC9wYXBlL3BvbGljaWVzLzIwMDcvMDYvcGhpc2hpbmctcmVzaXN0YW50IiFodHRwOi8vb3BlbmlkLm5ldC9zcnYvYXgvMS4wOwpUOwsiI2h0dHA6Ly93d3cubXlvcGVuaWQuY29tL3NlcnZlcjsMMDsNQBE7DiIkaHR0cDovL21pa2UuYnVybnMubXlvcGVuaWQuY29tLzoMY3NyZl9pZCIlYzk0ZDVhZGNiNzgwMmVhOWQ5NDdmMzE1YTBkOTlmZTAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--78beed1042bce098e2d5433b3aa71080a49566df
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/distaula-jkando" with {:method=>:get}):
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/routing/route_set.rb:385:in `recognize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:179:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/404.html (404 Not Found)
+
+
+Processing PostsController#index (for 216.220.110.61 at 2008-11-13 21:00:42) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYzk0ZDVhZGNiNzgwMmVhOWQ5NDdmMzE1YTBkOTlmZTAiPU9wZW5JRDo6Q29uc3VtZXI6OkRpc2NvdmVyZWRTZXJ2aWNlczo6T3BlbklEOjpDb25zdW1lcjo6bzopT3BlbklEOjpDb25zdW1lcjo6RGlzY292ZXJlZFNlcnZpY2VzCToOQHNlcnZpY2VzWwdvOiJPcGVuSUQ6Ok9wZW5JRFNlcnZpY2VFbmRwb2ludAw6GEBkaXNwbGF5X2lkZW50aWZpZXIwOg9AdHlwZV91cmlzWwoiIWh0dHA6Ly9vcGVuaWQubmV0L3NpZ25vbi8xLjEiH2h0dHA6Ly9vcGVuaWQubmV0L3NyZWcvMS4wIipodHRwOi8vb3BlbmlkLm5ldC9leHRlbnNpb25zL3NyZWcvMS4xIkdodHRwOi8vc2NoZW1hcy5vcGVuaWQubmV0L3BhcGUvcG9saWNpZXMvMjAwNy8wNi9waGlzaGluZy1yZXNpc3RhbnQiIWh0dHA6Ly9vcGVuaWQubmV0L3Nydi9heC8xLjA6EEB1c2VkX3lhZGlzVDoQQHNlcnZlcl91cmwiI2h0dHA6Ly93d3cubXlvcGVuaWQuY29tL3NlcnZlcjoSQGNhbm9uaWNhbF9pZDA6EEBjbGFpbWVkX2lkIhtodHRwOi8vbWlrZS1idXJucy5jb20vOg5AbG9jYWxfaWQiJGh0dHA6Ly9taWtlLmJ1cm5zLm15b3BlbmlkLmNvbS9vOwgMOwkwOwpbCiIhaHR0cDovL29wZW5pZC5uZXQvc2lnbm9uLzEuMCIfaHR0cDovL29wZW5pZC5uZXQvc3JlZy8xLjAiKmh0dHA6Ly9vcGVuaWQubmV0L2V4dGVuc2lvbnMvc3JlZy8xLjEiR2h0dHA6Ly9zY2hlbWFzLm9wZW5pZC5uZXQvcGFwZS9wb2xpY2llcy8yMDA3LzA2L3BoaXNoaW5nLXJlc2lzdGFudCIhaHR0cDovL29wZW5pZC5uZXQvc3J2L2F4LzEuMDsLVDsMIiNodHRwOi8vd3d3Lm15b3BlbmlkLmNvbS9zZXJ2ZXI7DTA7DkASOw8iJGh0dHA6Ly9taWtlLmJ1cm5zLm15b3BlbmlkLmNvbS86D0B5YWRpc191cmwiG2h0dHA6Ly9taWtlLWJ1cm5zLmNvbS86EkBzdGFydGluZ191cmwiG2h0dHA6Ly9taWtlLWJ1cm5zLmNvbS86DUBjdXJyZW50bzsIDDsJMDsKWwoiLGh0dHA6Ly9zcGVjcy5vcGVuaWQubmV0L2F1dGgvMi4wL3NpZ25vbiIfaHR0cDovL29wZW5pZC5uZXQvc3JlZy8xLjAiKmh0dHA6Ly9vcGVuaWQubmV0L2V4dGVuc2lvbnMvc3JlZy8xLjEiR2h0dHA6Ly9zY2hlbWFzLm9wZW5pZC5uZXQvcGFwZS9wb2xpY2llcy8yMDA3LzA2L3BoaXNoaW5nLXJlc2lzdGFudCIhaHR0cDovL29wZW5pZC5uZXQvc3J2L2F4LzEuMDsLVDsMIiNodHRwOi8vd3d3Lm15b3BlbmlkLmNvbS9zZXJ2ZXI7DTA7DkASOw8iJGh0dHA6Ly9taWtlLmJ1cm5zLm15b3BlbmlkLmNvbS8iCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--21cb2ce1ed540274c99081eb474281ee1fc963f5
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:01:29) [GET]
+  Session ID: 0c71319b14bd833e9ad5592eb8e859f8
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 11ms (View: 6, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:08:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 33ms (View: 22, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing SessionsController#new (for 71.59.210.192 at 2008-11-13 21:08:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--cf5aca62bc88a39714d317cdf1ae63eff1c30385
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://web.mikedistaula.com/login]
+
+
+Processing SessionsController#create (for 71.59.210.192 at 2008-11-13 21:08:53) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMjc1MThmYTllZDE2YjZjMzQ3NDA1NzkyMDc2NWE0YmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--dd42759258ffbcfa7023965b0f37f699027e273a
+  Parameters: {"openid_url"=>"", "commit"=>"Log in", "authenticity_token"=>"a9f3caaa38cf1dffd5fdca65619257a36bd5ada7", "action"=>"create", "controller"=>"sessions", "password"=>"llama3844", "login"=>"distaula"}
+Redirected to /
+Completed in 4ms (DB: 1) | 302 Found [http://web.mikedistaula.com/session]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:08:53) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--de348ec0a96dc8b0e96ec4255e2620d7502e8f87
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 24ms (View: 18, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#new (for 71.59.210.192 at 2008-11-13 21:08:57) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--02edab6aa823b578f4dccb4467ed4a92ea30a40f
+  Parameters: {"action"=>"new", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 167ms (View: 164, DB: 1) | 200 OK [http://web.mikedistaula.com/posts/new]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:12:20) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 163ms (View: 157, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:12:25) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 9, DB: 3) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#edit (for 71.59.210.192 at 2008-11-13 21:12:31) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://web.mikedistaula.com/posts/1/edit]
+
+
+Processing PostsController#update (for 71.59.210.192 at 2008-11-13 21:12:35) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"commit"=>"Update", "post"=>{"title"=>"First Post", "body"=>"So the blog is up and running.  I'll start posting in it soon."}, "authenticity_token"=>"a9f3caaa38cf1dffd5fdca65619257a36bd5ada7", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"posts"}
+Redirected to #<Post:0xb7137290>
+Completed in 22ms (DB: 2) | 302 Found [http://web.mikedistaula.com/posts/1]
+
+
+Processing PostsController#show (for 71.59.210.192 at 2008-11-13 21:12:35) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CUY=--5ac247dffd9116df74d581b67766a0d23620eb86
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 18ms (View: 12, DB: 3) | 200 OK [http://web.mikedistaula.com/posts/1]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:52:18) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CVQ=--5ef13e0337f1cb165fbe6067ee9d19a5020fdfb1
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 9, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 21:59:43) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 44ms (View: 32, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:00:25) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 101ms (View: 88, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:01:11) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+
+
+ActionView::TemplateError (undefined method `created_on' for #<Post:0xb6e632d0>) on line #8 of app/views/posts/index.html.erb:
+5:   <% end %>
+6: 	<div class="post">
+7:     <h2 class="title"><%= link_to post.title, post %></h2>
+8:     <h4><%= post.created_on %></h4>
+9: 	  <br />
+10: 	  <%=h post.body %>
+11: 	  <br />
+
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/posts/index.html.erb:8
+    app/views/posts/index.html.erb:1:in `each'
+    app/views/posts/index.html.erb:1
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:34:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:34:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/template.rb:73:in `render_template'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:250:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:356:in `_render_with_layout'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:248:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1156:in `render_for_file'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:895:in `render_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:7:in `index'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:01:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+
+
+ActionView::TemplateError (undefined method `created_on' for #<Post:0xb6cb8c3c>) on line #8 of app/views/posts/index.html.erb:
+5:   <% end %>
+6: 	<div class="post">
+7:     <h2 class="title"><%= link_to post.title, post %></h2>
+8:     <h4><%= post.created_on %></h4>
+9: 	  <br />
+10: 	  <%=h post.body %>
+11: 	  <br />
+
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/posts/index.html.erb:8
+    app/views/posts/index.html.erb:1:in `each'
+    app/views/posts/index.html.erb:1
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:34:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:34:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/template.rb:73:in `render_template'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:250:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:356:in `_render_with_layout'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:248:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1156:in `render_for_file'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:895:in `render_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:7:in `index'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:01:20) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+
+
+ActionView::TemplateError (undefined method `created_on' for #<Post:0xb6d98c4c>) on line #8 of app/views/posts/index.html.erb:
+5:   <% end %>
+6: 	<div class="post">
+7:     <h2 class="title"><%= link_to post.title, post %></h2>
+8:     <h4><%= post.created_on %></h4>
+9: 	  <br />
+10: 	  <%=h post.body %>
+11: 	  <br />
+
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/posts/index.html.erb:8
+    app/views/posts/index.html.erb:1:in `each'
+    app/views/posts/index.html.erb:1
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:34:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/renderable.rb:34:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/template.rb:73:in `render_template'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:250:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:356:in `_render_with_layout'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_view/base.rb:248:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1156:in `render_for_file'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:895:in `render_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/activesupport-2.2.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:7:in `index'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /home/distaula/.gem/ruby/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/bin/mongrel_rails:19:in `load'
+    /usr/bin/mongrel_rails:19
+
+Rendering /var/www/mikedistaula/public/500.html (500 Internal Server Error)
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:01:55) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUyNzUxOGZhOWVkMTZiNmMzNDc0MDU3OTIwNzY1YTRiZSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--76521f3c1da69500920bd63b26be922be6d70a1e
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 101ms (View: 89, DB: 4) | 200 OK [http://web.mikedistaula.com/]
