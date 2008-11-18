@@ -1764,3 +1764,19 @@ Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:01:55) [GET
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 101ms (View: 89, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-18 13:15:47) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVjY2NiYjQ4Y2E3NzhlNTE1NzliMzlkYTc3OTBmOGIyZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--79be1dc69d6fbcaed221c8bdaca2669f0ef1149d
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 254ms (View: 241, DB: 4) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-18 13:16:54) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVjY2NiYjQ4Y2E3NzhlNTE1NzliMzlkYTc3OTBmOGIyZiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--79be1dc69d6fbcaed221c8bdaca2669f0ef1149d
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 264ms (View: 250, DB: 6) | 200 OK [http://web.mikedistaula.com/]

@@ -9980,3 +9980,13 @@ Rendering template within layouts/posts
 Rendering posts/index
   [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
 Completed in 52ms (View: 34, DB: 2) | 200 OK [http://web.mikedistaula.com/]
+
+
+Processing PostsController#index (for 71.59.210.192 at 2008-11-13 22:49:32) [GET]
+  Session ID: ba11737e40e5d7a11da91e75a60aca18
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (2.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 116ms (View: 96, DB: 3) | 200 OK [http://linux.mikedistaula.com/]
