@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Music";
+}
+
+@section scripts
+{
+	<script>
+		$(document).ready(function() {
+			$("#output").html('');
+			var array = [];
+			var url = '/Home/MusicChart';
+			$.getJSON(url, function(data) {
+				//loop through atists
+				$.each(data, function(i, item) {
+					//create an element for each artist which contains the name, the tagcount and a link to an image
+					var element = { "name": item.Name, "playcount": item.PlayCount, "image": item.SmallImage, "url": item.Url };
+					array.push(element);
+				});
+				renderD3(data);
+				//renderCircle(data);
+			});
+		})
+	</script>
+}
+
+<h2>Music</h2>
+<p>
+    <div id="output">
+        @*<img src="/Home/MusicChart" />*@
+    </div>
+</p>

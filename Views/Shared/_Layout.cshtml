@@ -1,0 +1,73 @@
+﻿@using System.Web.Optimization
+@using BootstrapDiStaula.Helpers
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/css")
+	@Scripts.Render("~/analytics")
+
+</head>
+	<body>
+		<div class="page">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="@Url.Action("Index", "Home")">MikeDiStaula</a>
+					<ul class="nav">
+						@Html.MenuLink("Home", "Index", "Home")
+						@Html.MenuLink("About", "About", "Home")
+						@Html.MenuLink("Location", "Location", "Home")
+						@Html.MenuLink("Music", "Music", "Home")
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<noscript>
+				<div class="alert">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<strong>Warning!</strong> Please enable JavaScript in your browser!
+				</div>
+			</noscript>
+
+			<div class="row">
+				@if (IsSectionDefined("sidebar"))
+				{
+					<div class="span2">
+						@RenderSection("sidebar", required: false)
+					</div>
+				}
+
+				<div id="content" @(IsSectionDefined("sidebar") ? Html.Raw("class=span10") : Html.Raw("class=span12"))>
+					@if (IsSectionDefined("featured"))
+					{
+						<div>
+							<div class="hero-unit">
+								@RenderSection("featured", required: false)
+							</div>
+						</div>
+					}
+					<div>
+						@RenderBody()
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="span12">
+					<footer id="footer">
+						&copy; @DateTime.Now.Year The dude in the title.
+					</footer>
+				</div>
+			</div>
+		</div>
+			</div>
+		@Scripts.Render("~/js")
+		@RenderSection("scripts", required: false)
+	</body>
+</html>
