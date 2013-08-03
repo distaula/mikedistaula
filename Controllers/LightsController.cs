@@ -36,18 +36,18 @@ namespace BootstrapDiStaula.Controllers
 		}
 
 		// POST api/hue
-		public void Post([FromBody]string value)
+		public void Post([FromBody]Light value)
 		{
 		}
 
 		// PUT api/hue/5
-		public void Put(int id, [FromBody]string value)
+		public void Put(int id, [FromBody]Light value)
 		{
 		}
 
 		// DELETE api/hue/5
-		public void Delete(int id)
-		{
-		}
+		//public void Delete(int id)
+		//{
+		//}
 	}
 }
