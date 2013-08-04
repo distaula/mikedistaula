@@ -1,5 +1,9 @@
-﻿@model IEnumerable<Q42.HueApi.Light>
+﻿@using Q42.HueApi
+@model IEnumerable<Light>
 
 <h2>Lights</h2>
 
-@Html.DisplayFor(x => x)
+@foreach (Light light in Model)
+{
+	@Html.DisplayForModel(light)
+}

@@ -4,6 +4,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Collections.Generic;
 using AutoMapper;
 using Autofac;
 using Autofac.Integration.Mvc;
@@ -42,6 +43,9 @@ namespace BootstrapDiStaula
 			var client = new HueClient(HueConfig.HueIP);
 			client.Initialize(HueConfig.HueMd5);
 			builder.Register(c => client).As<IHueClient>().SingleInstance();
+
+			var list = new List<string> { "1", "2", "3", "4", "6" };
+			builder.Register(l => list).As<IEnumerable<string>>().SingleInstance();
 
 			// Build the container.
 			var container = builder.Build();

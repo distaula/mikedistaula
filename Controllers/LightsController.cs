@@ -1,48 +1,49 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Q42.HueApi;
 using BootstrapDiStaula.Models;
+using Q42.HueApi.Interfaces;
 
 namespace BootstrapDiStaula.Controllers
 {
-	public class LightsController : Controller
+	public class LightsController : AsyncController
 	{
-		private readonly ILightRepository lightRepository;
+		private readonly IHueClient _hueClient;
+		private IEnumerable<string> _lightList;
 
-		// If you are using Dependency Injection, you can delete the following constructor
-		public LightsController()
-			: this(new LightRepository())
+		public LightsController(IHueClient hueClient, IEnumerable<string> lightList)
 		{
-		}
-
-		public LightsController(ILightRepository lightRepository)
-		{
-			this.lightRepository = lightRepository;
+			_hueClient = hueClient;
+			_lightList = lightList;
 		}
 
 		//
 		// GET: /Default1/
 
-		public ViewResult Index()
+		public async Task<ViewResult> Index()
 		{
-			return View(lightRepository.All);
+			var lights = await _hueClient.GetLightsAsync();
+			var lightList = lights.Where(x => _lightList.Contains(x.Id));
+
+			return View(lightList);
 		}
 
 		//
 		// GET: /Default1/Details/5
 
-		public ViewResult Details(string id)
+		public async Task<ViewResult> Details(string id)
 		{
-			return View(lightRepository.Find(id));
+			return View(await _hueClient.GetLightAsync(id));
 		}
 
 		//
 		// GET: /Default1/Create
 
-		public ActionResult Create()
+		public async Task<ActionResult> Create()
 		{
 			return View();
 		}
@@ -51,12 +52,12 @@ namespace BootstrapDiStaula.Controllers
 		// POST: /Default1/Create
 
 		[HttpPost]
-		public ActionResult Create(Light light)
+		public async Task<ActionResult> Create(Light light)
 		{
 			if (ModelState.IsValid)
 			{
-				lightRepository.InsertOrUpdate(light);
-				lightRepository.Save();
+				//lightRepository.InsertOrUpdate(light);
+				//lightRepository.Save();
 				return RedirectToAction("Index");
 			}
 			else
@@ -68,21 +69,21 @@ namespace BootstrapDiStaula.Controllers
 		//
 		// GET: /Default1/Edit/5
 
-		public ActionResult Edit(string id)
+		public async Task<ActionResult> Edit(string id)
 		{
-			return View(lightRepository.Find(id));
+			return View(await _hueClient.GetLightAsync(id));
 		}
 
 		//
 		// POST: /Default1/Edit/5
 
 		[HttpPost]
-		public ActionResult Edit(Light light)
+		public async Task<ActionResult> Edit(Light light)
 		{
 			if (ModelState.IsValid)
 			{
-				lightRepository.InsertOrUpdate(light);
-				lightRepository.Save();
+				//lightRepository.InsertOrUpdate(light);
+				//lightRepository.Save();
 				return RedirectToAction("Index");
 			}
 			else
@@ -94,19 +95,19 @@ namespace BootstrapDiStaula.Controllers
 		//
 		// GET: /Default1/Delete/5
 
-		public ActionResult Delete(string id)
+		public async Task<ActionResult> Delete(string id)
 		{
-			return View(lightRepository.Find(id));
+			return View(await _hueClient.GetLightAsync(id));
 		}
 
 		//
 		// POST: /Default1/Delete/5
 
 		[HttpPost, ActionName("Delete")]
-		public ActionResult DeleteConfirmed(string id)
+		public async Task<ActionResult> DeleteConfirmed(string id)
 		{
-			lightRepository.Delete(id);
-			lightRepository.Save();
+			//lightRepository.Delete(id);
+			//lightRepository.Save();
 
 			return RedirectToAction("Index");
 		}
@@ -115,7 +116,7 @@ namespace BootstrapDiStaula.Controllers
 		{
 			if (disposing)
 			{
-				lightRepository.Dispose();
+				//lightRepository.Dispose();
 			}
 			base.Dispose(disposing);
 		}

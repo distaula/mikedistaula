@@ -10,12 +10,13 @@ namespace BootstrapDiStaula.Controllers.Api
 {
 	public class LightsController : ApiController
 	{
-		private readonly IEnumerable<string> _lightList = new List<string> { "1", "2", "3", "4", "6" };
+		private readonly IEnumerable<string> _lightList;
 
 		private IHueClient _hueClient;
-		public LightsController(IHueClient hueClient)
+		public LightsController(IHueClient hueClient, IEnumerable<string> lightList)
 		{
 			_hueClient = hueClient;
+			_lightList = lightList;
 		}
 
 		// GET api/hue
