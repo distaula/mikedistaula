@@ -159,8 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="App_Start\HueListConfig.cs" />
     <Compile Include="Controllers\Api\LightsController.cs" />
     <Compile Include="Controllers\LightsController.cs" />
+    <Compile Include="Extensions\HueClientExtensions.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -291,13 +293,8 @@
     <Content Include="Views\Home\Location.cshtml" />
     <Content Include="Views\Home\Music.cshtml" />
     <Content Include="Views\Lights\Index.cshtml" />
+    <Content Include="Views\Lights\Edit.cshtml" />
     <Content Include="Views\Lights\Details.cshtml" />
-    <Content Include="Views\Lights\Create.cshtml" />
-    <Content Include="Views\Lights\Delete.cshtml" />
-    <Content Include="Views\Lights\Edit.cshtml">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Views\Lights\_CreateOrEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

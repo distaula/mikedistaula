@@ -8,25 +8,29 @@
 
 <fieldset>
     <legend>Light</legend>
+	
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
 
-    <div class="display-label">State</div>
-    <div class="display-field">@Html.DisplayTextFor(_ => Model.State).ToString()</div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.State.On)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State.On)
+    </div>
 
-    <div class="display-label">Type</div>
-    <div class="display-field">@Model.Type</div>
-
-    <div class="display-label">Name</div>
-    <div class="display-field">@Model.Name</div>
-
-    <div class="display-label">ModelId</div>
-    <div class="display-field">@Model.ModelId</div>
-
-    <div class="display-label">SoftwareVersion</div>
-    <div class="display-field">@Model.SoftwareVersion</div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.State.Hex)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State.Hex)
+    </div>
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-
-

@@ -4,121 +4,127 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 using Q42.HueApi;
 using BootstrapDiStaula.Models;
+using BootstrapDiStaula.Extensions;
 using Q42.HueApi.Interfaces;
 
 namespace BootstrapDiStaula.Controllers
 {
-	public class LightsController : AsyncController
+	public class LightsController : Controller
 	{
 		private readonly IHueClient _hueClient;
-		private IEnumerable<string> _lightList;
+		private IList<Light> _lightList;
 
-		public LightsController(IHueClient hueClient, IEnumerable<string> lightList)
+		public LightsController(IHueClient hueClient, IList<Light> lightList)
 		{
 			_hueClient = hueClient;
 			_lightList = lightList;
 		}
 
-		//
-		// GET: /Default1/
-
-		public async Task<ViewResult> Index()
+		public ViewResult Index()
 		{
-			var lights = await _hueClient.GetLightsAsync();
-			var lightList = lights.Where(x => _lightList.Contains(x.Id));
-
-			return View(lightList);
+			return View(_lightList);
 		}
 
-		//
-		// GET: /Default1/Details/5
-
-		public async Task<ViewResult> Details(string id)
+		public ActionResult Refresh()
 		{
-			return View(await _hueClient.GetLightAsync(id));
-		}
-
-		//
-		// GET: /Default1/Create
-
-		public async Task<ActionResult> Create()
-		{
-			return View();
-		}
-
-		//
-		// POST: /Default1/Create
-
-		[HttpPost]
-		public async Task<ActionResult> Create(Light light)
-		{
-			if (ModelState.IsValid)
-			{
-				//lightRepository.InsertOrUpdate(light);
-				//lightRepository.Save();
-				return RedirectToAction("Index");
-			}
-			else
-			{
-				return View();
-			}
-		}
-
-		//
-		// GET: /Default1/Edit/5
-
-		public async Task<ActionResult> Edit(string id)
-		{
-			return View(await _hueClient.GetLightAsync(id));
-		}
-
-		//
-		// POST: /Default1/Edit/5
-
-		[HttpPost]
-		public async Task<ActionResult> Edit(Light light)
-		{
-			if (ModelState.IsValid)
-			{
-				//lightRepository.InsertOrUpdate(light);
-				//lightRepository.Save();
-				return RedirectToAction("Index");
-			}
-			else
-			{
-				return View();
-			}
-		}
-
-		//
-		// GET: /Default1/Delete/5
-
-		public async Task<ActionResult> Delete(string id)
-		{
-			return View(await _hueClient.GetLightAsync(id));
-		}
-
-		//
-		// POST: /Default1/Delete/5
-
-		[HttpPost, ActionName("Delete")]
-		public async Task<ActionResult> DeleteConfirmed(string id)
-		{
-			//lightRepository.Delete(id);
-			//lightRepository.Save();
+			HueListConfig.UpdateLights(_hueClient, _lightList);
 
 			return RedirectToAction("Index");
 		}
 
-		protected override void Dispose(bool disposing)
+		public ActionResult AllOff()
 		{
-			if (disposing)
+			var command = new LightCommand();
+			command = command.TurnOff();
+
+			_hueClient.SendCommandAsync(command, _lightList);
+			foreach (var light in _lightList)
 			{
-				//lightRepository.Dispose();
+				light.State.On = false;
 			}
-			base.Dispose(disposing);
+
+			ViewBag.Msg = "Turned off Lights";
+
+			return View("Index", _lightList);
+		}
+
+		public ActionResult AllOn()
+		{
+			var command = new LightCommand();
+			command = command.TurnOn();
+
+			_hueClient.SendCommandAsync(command, _lightList);
+			foreach (var light in _lightList)
+			{
+				light.State.On = true;
+			}
+
+			ViewBag.Msg = "Turned off Lights";
+
+			return View("Index", _lightList);
+		}
+
+		public ViewResult Details(string id)
+		{
+			Light light = _lightList.FirstOrDefault(x => x.Id == id);
+
+			if (light == null)
+				return View("Index", _lightList);
+
+			return View(light);
+		}
+
+		// GET: /Default1/Edit/5
+		public ActionResult Edit(string id)
+		{
+			Light light = _lightList.FirstOrDefault(x => x.Id == id);
+
+			if (light == null)
+				return RedirectToAction("Index");
+
+			return View(light);
+		}
+
+		// POST: /Default1/Edit/5
+		[HttpPost]
+		public ActionResult Edit(Light light)
+		{
+			if (ModelState.IsValid)
+			{
+				var command = Mapper.Map<LightCommand>(light.State);
+				Light lightIndex = _lightList.FirstOrDefault(x => x.Id == light.Id);
+				lightIndex.State.On = light.State.On;
+				lightIndex.State.Hex = light.State.Hex;
+
+				_hueClient.SendCommandAsync(command, lightIndex);
+
+				return RedirectToAction("Details");
+			}
+			else
+			{
+				return View();
+			}
+		}
+
+		public ActionResult Toggle(string id)
+		{
+			Light light = _lightList.FirstOrDefault(x => x.Id == id);
+			if (light != null)
+			{
+				light.State.On = !light.State.On;
+				var command = Mapper.Map<LightCommand>(light.State);
+				_hueClient.SendCommandAsync(command, light);
+				ViewBag.Msg = string.Format("Toggled Light {0}", light.Name);
+			}
+			else
+			{
+				ViewBag.Msg = string.Format("Cannot find light {0}", id);
+			}
+
+			return View("Index", _lightList);
 		}
 	}
 }

@@ -55,16 +55,4 @@ namespace BootstrapDiStaula.Controllers.Api
 		//{
 		//}
 	}
-
-	public static class LightExtensions
-	{
-		public static LightCommand GetCommand(this Light light)
-		{
-			var command = new LightCommand();
-			command.Alert = light.State.Alert;
-			command.Brightness = light.State.Brightness;
-
-			return null;
-		}
-	}
 }

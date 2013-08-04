@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -44,8 +45,18 @@ namespace BootstrapDiStaula
 			client.Initialize(HueConfig.HueMd5);
 			builder.Register(c => client).As<IHueClient>().SingleInstance();
 
-			var list = new List<string> { "1", "2", "3", "4", "6" };
-			builder.Register(l => list).As<IEnumerable<string>>().SingleInstance();
+			var list = new List<Light>
+				{
+					new Light {Id = "1"},
+					new Light {Id = "2"},
+					new Light {Id = "3"},
+					new Light {Id = "4"},
+					new Light {Id = "6"}
+				};
+
+			HueListConfig.UpdateLights(client, list);
+
+			builder.Register(l => list).As<IList<Light>>().SingleInstance();
 
 			// Build the container.
 			var container = builder.Build();
@@ -56,6 +67,7 @@ namespace BootstrapDiStaula
 			// Configure Web API with the dependency resolver.
 			GlobalConfiguration.Configuration.DependencyResolver = webApiResolver;
 			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
 		}
 	}
 

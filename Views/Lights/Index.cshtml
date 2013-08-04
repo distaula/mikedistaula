@@ -1,9 +1,43 @@
-﻿@using Q42.HueApi
-@model IEnumerable<Light>
+﻿@model IEnumerable<Q42.HueApi.Light>
 
-<h2>Lights</h2>
-
-@foreach (Light light in Model)
-{
-	@Html.DisplayForModel(light)
+@{
+    ViewBag.Title = "Index";
 }
+
+<h2>@ViewBag.Msg</h2>
+
+<p>
+    @Html.ActionLink("All Off", "AllOff") | @Html.ActionLink("All On", "AllOn")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State.On)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.State.On)
+        </td>
+        <td>
+            @Html.ActionLink("Toggle", "Toggle", new { id=item.Id }) |
+			 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) 
+        </td>
+    </tr>
+}
+
+</table>
+
+
+	<p>@Html.TextBoxFor(m => m.FirstOrDefault().State.Hex, new {@class = "minicolors", data_control = "wheel"})</p>
