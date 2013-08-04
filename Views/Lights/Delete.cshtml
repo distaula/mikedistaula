@@ -1,0 +1,35 @@
+@model Q42.HueApi.Light
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Light</legend>
+
+    <div class="display-label">State</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.State).ToString()</div>
+
+    <div class="display-label">Type</div>
+    <div class="display-field">@Model.Type</div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">ModelId</div>
+    <div class="display-field">@Model.ModelId</div>
+
+    <div class="display-label">SoftwareVersion</div>
+    <div class="display-field">@Model.SoftwareVersion</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

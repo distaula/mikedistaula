@@ -1,0 +1,36 @@
+@model Q42.HueApi.Light
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Type)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Type)
+    @Html.ValidationMessageFor(model => model.Type)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ModelId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ModelId)
+    @Html.ValidationMessageFor(model => model.ModelId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SoftwareVersion)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SoftwareVersion)
+    @Html.ValidationMessageFor(model => model.SoftwareVersion)
+</div>
+
