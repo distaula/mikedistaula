@@ -6,6 +6,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using AutoMapper;
 using Autofac;
+using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using BootstrapDiStaula.App_Start;
 using Glimpse.Core.Extensibility;
@@ -35,23 +36,46 @@ namespace BootstrapDiStaula
 
 			// Register the Web API controllers.
 			builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+			builder.RegisterControllers(Assembly.GetExecutingAssembly());
 
 			// Register other dependencies.
 			var client = new HueClient(HueConfig.HueIP);
 			client.Initialize(HueConfig.HueMd5);
-			builder.Register(c => client).As<IHueClient>().InstancePerApiRequest();
-
+			builder.Register(c => client).As<IHueClient>().SingleInstance();
 
 			// Build the container.
 			var container = builder.Build();
 
 			// Create the depenedency resolver.
-			var resolver = new AutofacWebApiDependencyResolver(container);
+			var webApiResolver = new AutofacWebApiDependencyResolver(container);
 
 			// Configure Web API with the dependency resolver.
-			GlobalConfiguration.Configuration.DependencyResolver = resolver;
+			GlobalConfiguration.Configuration.DependencyResolver = webApiResolver;
+			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 		}
 	}
+
+	//public async Task<ActionResult> Register()
+	//{
+	//	var viewModel = new AdminViewModel();
+	//	var locator = new SSDPBridgeLocator();
+
+	//	//For Windows 8 and .NET45 projects you can use the SSDPBridgeLocator which actually scans your network. 
+	//	//See the included BridgeDiscoveryTests and the specific .NET and .WinRT projects
+	//	IEnumerable<string> bridgeIPs = await locator.LocateBridgesAsync(TimeSpan.FromSeconds(15));
+
+	//	HueClient client = new HueClient(HueConfig.HueIP);
+	//	viewModel.Result = await client.RegisterAsync(HueConfig.AppName, HueConfig.HueMd5);
+
+	//	if (viewModel.Result)
+	//	{
+	//		viewModel.Log = "Successfully registered application";
+	//		return View("HueAdmin", viewModel);
+	//	}
+
+	//	viewModel.Log = "Failed to register application";
+	//	return View("HueAdmin", viewModel);
+	//}
 
 	internal static class HueConfig
 	{

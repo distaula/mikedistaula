@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Q42.HueApi.Interfaces;
 using Q42.HueApi.NET;
 
 namespace BootstrapDiStaula
@@ -20,15 +21,10 @@ namespace BootstrapDiStaula
 	{
 		private readonly IEnumerable<string> _lightList = new List<string> { "1", "2", "3", "4", "6" };
 
-		private HueClient _hueClient;
-		private HueClient hueClient
+		private IHueClient _hueClient;
+		public HomeController(IHueClient hueClient)
 		{
-			get
-			{
-				if (_hueClient == null)
-					Initialize();
-				return _hueClient;
-			}
+			_hueClient = hueClient;
 		}
 
 		public ActionResult Index()
@@ -53,45 +49,10 @@ namespace BootstrapDiStaula
 			command = command.SetColor(model.Color.Remove(0, 1));
 			command.Effect = Effect.None;
 
-			hueClient.SendCommandAsync(command, _lightList);
+			_hueClient.SendCommandAsync(command, _lightList);
 
 			return View("HueAdmin", new AdminViewModel { Log = "Changed Color" });
 		}
-
-		public HueClient Initialize()
-		{
-			if (_hueClient != null)
-				return _hueClient;
-
-			var client = new HueClient(HueConfig.HueIP);
-			client.Initialize(HueConfig.HueMd5);
-			_hueClient = client;
-
-			return _hueClient;
-		}
-
-
-		//public async Task<ActionResult> Register()
-		//{
-		//	var viewModel = new AdminViewModel();
-		//	var locator = new SSDPBridgeLocator();
-
-		//	//For Windows 8 and .NET45 projects you can use the SSDPBridgeLocator which actually scans your network. 
-		//	//See the included BridgeDiscoveryTests and the specific .NET and .WinRT projects
-		//	IEnumerable<string> bridgeIPs = await locator.LocateBridgesAsync(TimeSpan.FromSeconds(15));
-
-		//	HueClient client = new HueClient(HueConfig.HueIP);
-		//	viewModel.Result = await client.RegisterAsync(HueConfig.AppName, HueConfig.HueMd5);
-
-		//	if (viewModel.Result)
-		//	{
-		//		viewModel.Log = "Successfully registered application";
-		//		return View("HueAdmin", viewModel);
-		//	}
-
-		//	viewModel.Log = "Failed to register application";
-		//	return View("HueAdmin", viewModel);
-		//}
 
 		public ActionResult TurnOff()
 		{
@@ -99,14 +60,14 @@ namespace BootstrapDiStaula
 			command = command.TurnOff();
 			command.Effect = Effect.None;
 
-			hueClient.SendCommandAsync(command, _lightList);
+			_hueClient.SendCommandAsync(command, _lightList);
 
 			return View("HueAdmin", new AdminViewModel { Log = "Turned Off" });
 		}
 
 		public async Task<ActionResult> Toggle()
 		{
-			var light = await hueClient.GetLightAsync(_lightList.FirstOrDefault());
+			var light = await _hueClient.GetLightAsync(_lightList.FirstOrDefault());
 
 			if (light.State.On)
 				return TurnOff();
@@ -120,7 +81,7 @@ namespace BootstrapDiStaula
 			command = command.TurnOn();
 			command.Effect = Effect.None;
 
-			hueClient.SendCommandAsync(command, _lightList);
+			_hueClient.SendCommandAsync(command, _lightList);
 
 			return View("HueAdmin", new AdminViewModel { Log = "Turned On" });
 		}
@@ -131,7 +92,7 @@ namespace BootstrapDiStaula
 			command = command.TurnOn();
 			command.Effect = Effect.ColorLoop;
 
-			hueClient.SendCommandAsync(command, new List<string> { "5" });
+			_hueClient.SendCommandAsync(command, new List<string> { "5" });
 
 			return View("HueAdmin", new AdminViewModel { Log = "SetWheel" });
 		}
