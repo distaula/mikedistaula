@@ -94,10 +94,10 @@ namespace BootstrapDiStaula.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var command = Mapper.Map<LightCommand>(light.State);
 				Light lightIndex = _lightList.FirstOrDefault(x => x.Id == light.Id);
 				lightIndex.State.On = light.State.On;
 				lightIndex.State.Hex = light.State.Hex;
+				var command = Mapper.Map<LightCommand>(lightIndex.State);
 
 				_hueClient.SendCommandAsync(command, lightIndex);
 
