@@ -4,8 +4,10 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AutoMapper;
 using Autofac;
 using Autofac.Integration.WebApi;
+using BootstrapDiStaula.App_Start;
 using Glimpse.Core.Extensibility;
 using Q42.HueApi;
 using Q42.HueApi.Interfaces;
@@ -24,6 +26,9 @@ namespace BootstrapDiStaula
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+			AutoMapperConfig.Configure();
+
 
 			// Create the container builder.
 			var builder = new ContainerBuilder();
