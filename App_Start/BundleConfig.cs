@@ -41,7 +41,8 @@ namespace BootstrapDiStaula
 							.Include("~/Scripts/protovis.min.js")
 							.Include("~/Scripts/d3.js")
 							.Include("~/Scripts/d3.chart.js")
-							.Include("~/Scripts/d3.layout.js"));
+							.Include("~/Scripts/d3.layout.js")
+							.Include("~/Scripts/miniColors.js"));
 		}
 	}
 }

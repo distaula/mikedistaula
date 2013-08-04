@@ -36,7 +36,7 @@
             @Html.LabelFor(model => model.State.Hex)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.State.Hex)
+            @Html.TextBoxFor(m => m.State.Hex, new {@class = "minicolors", data_control = "wheel"})
             @Html.ValidationMessageFor(model => model.State.Hex)
         </div>
 

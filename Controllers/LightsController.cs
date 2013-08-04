@@ -62,7 +62,7 @@ namespace BootstrapDiStaula.Controllers
 				light.State.On = true;
 			}
 
-			ViewBag.Msg = "Turned off Lights";
+			ViewBag.Msg = "Turned on Lights";
 
 			return View("Index", _lightList);
 		}
@@ -125,6 +125,21 @@ namespace BootstrapDiStaula.Controllers
 			}
 
 			return View("Index", _lightList);
+		}
+
+		public ActionResult SetDefaults()
+		{
+			State state = HueListConfig.DefaultState();
+			var command = Mapper.Map<LightCommand>(state);
+			foreach (var light in _lightList)
+			{
+				light.State = state;
+			}
+			_hueClient.SendCommandAsync(command, _lightList);
+
+			ViewBag.Msg = "Turned off Lights";
+
+			return RedirectToAction("Index", _lightList);
 		}
 	}
 }

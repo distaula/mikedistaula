@@ -24,5 +24,21 @@ namespace BootstrapDiStaula
 		{
 			light = client.GetLightAsync(light.Id).Result;
 		}
+
+		public static State DefaultState()
+		{
+			var state = new State();
+			state.Alert = Alert.None;
+			state.Brightness = 254;
+			state.Hex = "FFB672";
+			state.ColorMode = "hs";
+			state.ColorTemperature = 369;
+			state.Effect = Effect.None;
+			state.Hue = 14922;
+			state.On = true;
+			state.Saturation = 144;
+
+			return state;
+		}
 	}
 }
