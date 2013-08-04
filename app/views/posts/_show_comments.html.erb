@@ -1,0 +1,13 @@
+<% for comment in @post.comments %>
+
+  <% if logged_in? && ((current_user.login == comment.user) || admin?) %>
+    <%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
+  <div class="post">
+	<h3 class="title">Posted by: <%=h comment.user %></h3>
+	<br />
+    <%=h comment.body %>
+  </div>
+<% end %>
+
+<br />
